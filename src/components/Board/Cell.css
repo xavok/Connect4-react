@@ -1,0 +1,17 @@
+.board .cell {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin:10px;
+    background-color: white;
+}
+
+.board .cell.black {
+    background-color: black;
+}
+.board .cell.red {
+    background-color: red;
+}
+
+/* Safari 4.0 - 8.0 */

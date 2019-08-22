@@ -1,0 +1,14 @@
+.container .board {
+    position: relative;
+    display: flex;
+    background-color: #0071ff;
+    margin: auto;
+    width: 85%;
+    border: 3px solid black;
+    padding: 10px;
+}
+
+.container .board .column {
+    display: flex;
+    flex-direction: column-reverse;
+}
