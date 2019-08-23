@@ -1,4 +1,4 @@
-import {PLAYER_NAMES, ASSIGN_CELL} from "./types";
+import {PLAYER_NAMES, ASSIGN_CELL,NEW_GAME} from "./types";
 
 export const playerNames = (formValues) => {
     return {
@@ -15,5 +15,12 @@ export const assignCell = ({column,row,cell}) => {
             row,
             cell
         }
+    };
+};
+
+export const newGame = () => {
+    return {
+        type: NEW_GAME,
+        payload: {}
     };
 };

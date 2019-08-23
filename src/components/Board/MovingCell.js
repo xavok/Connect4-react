@@ -6,22 +6,24 @@ import styled, {keyframes} from 'styled-components';
 
 class MovingCell extends Component {
     render() {
-        let color = '';
-        if (this.props.game.currentPlayer === 1) {
+        let color = '', transfer = 10;
+        const {game} = this.props;
+        if (game.currentPlayer === 1 || game.winner === 2) {
             color = 'red';
-        } else if (this.props.game.currentPlayer === 2) {
+        } else if (game.currentPlayer === 2 || game.winner === 1) {
             color = 'black';
         }
+        if(game.winner !== 0) transfer = -35;
         const keyFrameExampleOne = keyframes`
-                    0%   {background: ${color}; top: 0px;left: ${this.props.game.movingCell.x - 10}px}
-                    100% {background: ${color}; top: ${this.props.game.movingCell.y - 10}px; left: ${this.props.game.movingCell.x - 10}px}
+                    0%   {background: ${color}; top: 0px;left: ${game.movingCell.x - 10}px}
+                    100% {background: ${color}; top: ${game.movingCell.y - transfer}px; left: ${game.movingCell.x - 10}px}
                 `;
         const Box = styled.div`
                         position:fixed;
-                        animation: ${keyFrameExampleOne} 1s 1 linear forwards;
+                        animation: ${keyFrameExampleOne} 0.5s 1 linear forwards;
                     `;
-        if(this.props.game.movingCell.x && this.props.game.currentPlayer !== 0) {
-            return <Box className="cell"></Box>;
+        if(game.movingCell.x && game.currentPlayer !== 0) {
+            return <Box className="cell moving"></Box>;
         } else
         return (
             <div style={{display: 'none'}}>

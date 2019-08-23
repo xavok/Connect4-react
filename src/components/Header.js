@@ -6,7 +6,7 @@ class Header extends Component {
     renderWinner = () => {
         const {winner, playerOne,playerTwo,currentPlayer} = this.props.game;
         if(currentPlayer ===0 && winner ===0) return 'Draw';
-        return winner !== 0 ? (winner === 1) ? `${playerOne} won` :  `${playerTwo} won` : '';
+        return winner !== 0 ? (winner === 1) ? `Congratulations! ${playerOne} won` :  `Congratulations! ${playerTwo} won` : '';
     };
 
     render() {

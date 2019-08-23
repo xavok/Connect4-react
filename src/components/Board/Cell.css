@@ -6,12 +6,22 @@
     margin:10px;
     background-color: white;
 }
-
 .board .cell.black {
     background-color: black;
+    animation: changeBlack 0.5s linear;
 }
 .board .cell.red {
     background-color: red;
+    animation: changeRed 0.5s linear;
 }
 
-/* Safari 4.0 - 8.0 */
+@keyframes changeRed {
+    0% { background-color: white}
+    99% { background-color: white}
+    100% { background-color: red}
+}
+@keyframes changeBlack {
+    0% { background-color: white}
+    99% { background-color: white}
+    100% { background-color: black}
+}

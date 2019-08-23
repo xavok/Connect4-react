@@ -6,9 +6,5 @@
     width: 85%;
     border: 3px solid black;
     padding: 10px;
-}
-
-.container .board .column {
-    display: flex;
-    flex-direction: column-reverse;
+    box-shadow:-1px 2px 0.2em grey;
 }

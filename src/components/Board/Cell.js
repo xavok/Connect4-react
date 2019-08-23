@@ -1,5 +1,5 @@
 import './Cell.css';
-import React, {useState,useRef} from "react";
+import React, {useRef} from "react";
 import {connect} from "react-redux";
 import {assignCell} from '../../actions';
 
@@ -12,7 +12,7 @@ const Cell = (props) => {
         color += ' red';
     }
     return (
-        <div ref={ref1} className={color} onClick={(e) => {
+        <div ref={ref1} className={color} onClick={() => {
             props.assignCell({row: props.row, column: props.column, cell: ref1})
         }}>
         </div>
