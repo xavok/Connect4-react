@@ -5,6 +5,10 @@
     border: 1px solid black;
     margin:10px;
     background-color: white;
+    display: inline-grid;
+}
+.board .col {
+    display: inline-grid;
 }
 .board .cell.black {
     background-color: black;

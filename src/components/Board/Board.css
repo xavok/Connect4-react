@@ -1,10 +1,10 @@
 .container .board {
     position: relative;
-    display: flex;
+    display: inline-block;
     background-color: #0071ff;
     margin: auto;
-    width: 85%;
     border: 3px solid black;
     padding: 10px;
     box-shadow:-1px 2px 0.2em grey;
+    text-align: center;
 }

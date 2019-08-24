@@ -28,7 +28,7 @@ class App extends Component {
 
     render() {
         return (
-            <div className="ui container">
+            <div className="ui container" style={{textAlign: "center"}}>
                 <Header/>
                 {this.renderBoard()}
                 {this.renderRestart()}

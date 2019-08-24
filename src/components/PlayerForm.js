@@ -17,7 +17,7 @@ class PlayerForm extends Component {
         return (
             <div className={className}>
                 <label>{label}</label>
-                <input {...input} autoComplete="off"/>
+                <input {...input} autoComplete="off" style={{textAlign:"center"}}/>
                 {this.renderError(meta)}
             </div>
         );
@@ -31,7 +31,7 @@ class PlayerForm extends Component {
     render() {
         return (
             <form className="ui form error" onSubmit={this.props.handleSubmit(this.onSubmit)}>
-                <Field name="playerOne" component={this.renderInput} label="Enter Player 1"/>
+                <Field name="playerOne" component={this.renderInput} label="Enter Player 1" />
                 <Field name="playerTwo" component={this.renderInput} label="Enter Player 2"/>
                 <button className="ui button primary">Submit</button>
             </form>
